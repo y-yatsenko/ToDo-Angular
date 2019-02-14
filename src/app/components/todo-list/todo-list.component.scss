@@ -1,0 +1,87 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  &-input {
+    padding: 10px 18px;
+    font-size: 18px;
+    margin-bottom: 16px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+  &-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation-duration: 0.3s;
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+    &-label {
+      padding: 10px;
+      border: 1px solid white;
+      margin-left: 12px;
+    }
+    &-edit {
+      font-size: 20px;
+      margin-left: 12px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-family: Helvetica, Arial, sans-serif;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.remove-item {
+  cursor: pointer;
+  margin-left: 14px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.extra-container {
+  border-top: 1px solid lightgrey;
+  padding-top: 14px;
+}
+
+button {
+  font-size: 14px;
+  background-color: white;
+  appearance: none;
+  border-radius: 2px;
+
+  &:hover {
+    background: orangered;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
